@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Facebook Login in ASP.NET</h1>
+
+    @if (ViewBag.Name != null)
+    {
+        <p>Welcome, @ViewBag.Name!</p>
+        <p>Your email is: @ViewBag.Email</p>
+        <p><a href="/Home/Logout" class="btn btn-primary btn-lg">Logout</a></p>
+    }
+    else
+    {
+        <p><a href="@ViewBag.Url" class="btn btn-primary btn-lg">Login With Facebook</a></p>
+    }
+</div>
